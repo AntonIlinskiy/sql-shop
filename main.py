@@ -8,7 +8,7 @@ def main() -> None:
     pas = "postgres"
     settings = DatabaseSettings(
         host="localhost",
-        port=54321,
+        port=5432,
         db="postgres",
         user="postgres",
         password=pas,
