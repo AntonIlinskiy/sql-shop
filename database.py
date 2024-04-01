@@ -32,7 +32,7 @@ class Database:
         """
         self._settings = settings
 
-    def _call_(self: "Database") -> "Database.Connection":
+    def __call__(self: "Database") -> "Database.Connection":
         """Создание подключения."""
         return Database.Connection(self._settings)
 

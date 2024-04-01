@@ -23,6 +23,19 @@ files = [
 ]
 
 [[package]]
+name = "envparse"
+version = "0.2.0"
+description = "Simple environment variable parsing"
+optional = false
+python-versions = "*"
+files = [
+    {file = "envparse-0.2.0.tar.gz", hash = "sha256:4f3b9a27bb55d27f124eb4adf006fec05e4588891c9a054a183a112645056eb7"},
+]
+
+[package.extras]
+testing = ["pytest"]
+
+[[package]]
 name = "filelock"
 version = "3.13.2"
 description = "A platform independent file lock."
@@ -279,4 +292,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "ec0b10e3e99d684f54150dabf0299da8d5b7209a3b9a358d86ef61e01e492938"
+content-hash = "31bebc4ed05ecba7ee00ac96fa1c8523b0350ddb1becdb123b85b0e38983ce5f"
