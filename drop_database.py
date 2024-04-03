@@ -14,7 +14,7 @@ TABLES = (
 def drop() -> None:
     """Основная функция модуля."""
     for table in TABLES:
-        sql_command = f"DROP TABLE {table} CASCADE"
+        sql_command = f"DROP TABLE IF EXISTS {table} CASCADE"
         execute_command(sql_command)
 
 
