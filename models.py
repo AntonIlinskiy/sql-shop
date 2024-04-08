@@ -1,12 +1,33 @@
 """Модуль c описанием моделей БД для работы приложения."""
 
+from abc import ABC, abstractmethod
 from typing import Literal
 
 from database import Database
 from settings import db
 
 
-class Rack:
+class BaseModel(ABC):
+    """Базовый класс модели."""
+
+    @staticmethod
+    @abstractmethod
+    def get_by(field: Literal["id", "name"], value: int | str) -> "BaseModel":
+        """Метод для получения экземляра модели из базы.
+
+        Args:
+        ----
+            field (Literal["id", "name"]): название поля.
+            value (int | str): значение поля.
+
+        Returns:
+        -------
+            BaseModel: экземпляр модели из базы.
+
+        """
+
+
+class Rack(BaseModel):
     """Класс, представлющий стеллаж."""
 
     db: Database = db
